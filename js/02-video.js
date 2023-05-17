@@ -11,11 +11,11 @@ const onPlay = function (data) {
     localStorage.setItem(LOCAL_STORAGE_KEY, currentTime);
 };
 
-player.on('timeupdate', throttle(onSavePause, 1000));
+player.on('timeupdate', throttle(timeLocalStorage, 1000));
 
 player.setCurrentTime(timeLocalStorage).catch(function (er) {
     switch (er.name) {
-        case 'RangeError';
+        case 'RangeError':
             break;
     default:
         break;

@@ -1,23 +1,24 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 // Change code below this line
 
 console.log(galleryItems);
 
 const galleryEl = document.querySelector(".gallery");
-const markup = galleryItems.map(item => `
-    <li class="gallery_item">
-        <a class="gallery_link" href= "${item.original}">
+const markup = galleryItems.map(({preview, original, description}) => {
+    return `<li class="gallery_item">
+        <a class="gallery_link" href= "${original}">
             <img
             class="gallery_image"
-            src="${item.preview}"
-            alt="${item.description}"
+            src="${preview}"
+            alt="${description}"
             />
         </a>
     </li>`
-).join('');
+}).join("");
 
 galleryEl.insertAdjacentHTML("beforeend", markup);
 

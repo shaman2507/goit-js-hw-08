@@ -1,0 +1,1 @@
+{"mappings":"oeAAAA,EAAA,S","sources":["src/js/02-video.js"],"sourcesContent":["import simpleLightbox from \"simplelightbox\";\nimport throttle from \"lodash.throttle\";\nimport \"simplelightbox/dist/simple-lightbox.min.css\";\n"],"names":["parcelRequire"],"version":3,"file":"02-video.eece2602.js.map"}

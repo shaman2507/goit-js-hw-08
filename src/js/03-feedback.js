@@ -12,7 +12,7 @@ const KEY_FORM = 'feedback-form-state';
 const { email, message } = refs.form.elements;
 
 saveEl();
-const formData = {};
+let formData = {};
 function onForm(e) {
     const mailEl = email.value;
     const messageEl = message.value;
